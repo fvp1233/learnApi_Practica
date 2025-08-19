@@ -11,7 +11,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/image")
-@CrossOrigin()
+@CrossOrigin("*")
 public class ImageController {
 
     @Autowired
@@ -44,7 +44,7 @@ public class ImageController {
             String imageUrl = cloudinaryService.uploadImage(file, folder);
             return ResponseEntity.ok(Map.of(
                     "message", "Imagen subida Exitosamente",
-                    "url", "imageUrl"
+                    "url", imageUrl
             ));
 
         } catch (IOException e){

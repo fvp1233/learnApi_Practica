@@ -22,7 +22,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/category")
-@CrossOrigin
+@CrossOrigin("*")
 public class CategoriesController {
 
     //Inyectar la clase service

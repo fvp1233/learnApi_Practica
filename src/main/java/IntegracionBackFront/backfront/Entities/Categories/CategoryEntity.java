@@ -32,4 +32,5 @@ public class CategoryEntity {
 
     @Column(name = "FECHACREACION")
     private LocalDate fechaCreacion;
+
 }
